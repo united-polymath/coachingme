@@ -1,0 +1,35 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background: #FFFFFF;
+    color: #0B1410;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    line-height: 1.7;
+    font-feature-settings: 'ss10' 1;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+  }
+  ::selection {
+    background: #446F35;
+    color: #FFFFFF;
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
+}

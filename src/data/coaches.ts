@@ -1,0 +1,148 @@
+import type { FieldKey } from './fields';
+
+export type Coach = {
+  id: string;
+  name: string;
+  nameEn: string;
+  title: string;
+  location: string;
+  region: 'KR' | 'GLOBAL';
+  field: FieldKey;
+  bio: string;
+  credentials: string[];
+};
+
+export const COACHES: Coach[] = [
+  {
+    id: 'kim-do-hyun',
+    name: '김도현',
+    nameEn: 'Do-Hyun Kim',
+    title: '취업·이직 컨설팅 헤드',
+    location: '서울',
+    region: 'KR',
+    field: 'career',
+    bio: '대기업 HR 임원과 글로벌 헤드헌팅 펌을 거치며 20년간 임원·경력직 채용을 진행했다. 시장 가치 진단과 오퍼 협상에 강점을 둔다.',
+    credentials: ['전 삼성전자 인사그룹', '前 Egon Zehnder Korea', 'KAIST 경영공학 석사'],
+  },
+  {
+    id: 'lee-su-min',
+    name: '이수민',
+    nameEn: 'Su-Min Lee',
+    title: '진로·적성 수석 컨설턴트',
+    location: '서울',
+    region: 'KR',
+    field: 'aptitude',
+    bio: '직업심리학과 인지과학을 결합한 진로 진단 프레임워크를 설계했다. 청년부터 시니어까지 평생 진로 설계를 자문한다.',
+    credentials: ['KAIST 산업공학 박사', '한국직업능력연구원 자문위원', 'CFI 진단 도구 개발자'],
+  },
+  {
+    id: 'park-jae-wan',
+    name: '박재완',
+    nameEn: 'Jae-Wan Park',
+    title: '창업 컨설팅 디렉터',
+    location: '서울',
+    region: 'KR',
+    field: 'entrepreneurship',
+    bio: '두 차례 창업과 시리즈 B 엑시트를 경험했다. PMF 탐색과 데스밸리 돌파, 창업자 멘탈리티 자문이 핵심 영역이다.',
+    credentials: ['前 핀테크 스타트업 공동창업', '서울대 경영학 학사', 'Y Combinator 멘토'],
+  },
+  {
+    id: 'jung-min-seo',
+    name: '정민서',
+    nameEn: 'Min-Seo Jung',
+    title: '인성·성향 수석 분석가',
+    location: '서울',
+    region: 'KR',
+    field: 'character',
+    bio: '임상심리와 조직심리를 함께 다룬다. 임원진 갈등 진단과 코파운더 적합성 검증 프로젝트를 다수 진행했다.',
+    credentials: ['연세대 임상심리 박사', '미국 심리학회(APA) 정회원', 'Hogan Assessment 인증'],
+  },
+  {
+    id: 'han-ji-eun',
+    name: '한지은',
+    nameEn: 'Ji-Eun Han',
+    title: '취업·이직 컨설턴트',
+    location: '서울',
+    region: 'KR',
+    field: 'career',
+    bio: '미디어·콘텐츠·플랫폼 산업의 인재 이동을 전문으로 한다. 산업 전환기의 포지셔닝 재설계가 강점이다.',
+    credentials: ['前 카카오 People Team', '컬럼비아 미디어매니지먼트 석사'],
+  },
+  {
+    id: 'choi-young-soo',
+    name: '최영수',
+    nameEn: 'Young-Soo Choi',
+    title: '창업 컨설턴트',
+    location: '서울',
+    region: 'KR',
+    field: 'entrepreneurship',
+    bio: '임팩트 투자사 운용역 출신. 소셜벤처와 B2B SaaS 초기 단계 자문, 정부 R&D 과제 설계를 함께 다룬다.',
+    credentials: ['전 D3 Jubilee 파트너', '서울대 경제학', 'CFA'],
+  },
+  {
+    id: 'sarah-chen',
+    name: 'Sarah Chen',
+    nameEn: 'Dr. Sarah Chen',
+    title: 'Aptitude Lead, Global',
+    location: 'San Francisco, USA',
+    region: 'GLOBAL',
+    field: 'aptitude',
+    bio: '실리콘밸리 테크 인재의 진로 전환과 이공계 박사들의 산업 이동 자문이 전문 영역이다. COACHINGME 글로벌 본부 수석 자문위원.',
+    credentials: ['Stanford GSB Ph.D.', '전 McKinsey & Company', 'COACHINGME Global Senior Fellow'],
+  },
+  {
+    id: 'marcus-reinhardt',
+    name: 'Marcus Reinhardt',
+    nameEn: 'Marcus Reinhardt',
+    title: 'Entrepreneurship Advisor, DACH',
+    location: 'Berlin, Germany',
+    region: 'GLOBAL',
+    field: 'entrepreneurship',
+    bio: '독일·오스트리아·스위스 시장 진출 자문과 EU 펀딩 라운드 전문. 한국 스타트업의 유럽 진출을 직접 동행한다.',
+    credentials: ['전 Rocket Internet VP', 'WHU – Otto Beisheim MBA', 'EU Horizon Europe 평가위원'],
+  },
+  {
+    id: 'aiko-tanaka',
+    name: 'Aiko Tanaka',
+    nameEn: 'Aiko Tanaka',
+    title: 'Character Analysis, APAC',
+    location: 'Tokyo, Japan',
+    region: 'GLOBAL',
+    field: 'character',
+    bio: '동아시아 조직문화의 미묘한 결을 다룬다. 일본·한국 합작 법인의 임원 갈등 조정 사례 다수.',
+    credentials: ['東京大学 조직심리 박사', '前 Recruit Holdings', 'COACHINGME Tokyo Chapter Lead'],
+  },
+  {
+    id: 'james-obrien',
+    name: 'James O’Brien',
+    nameEn: 'James O’Brien',
+    title: 'Senior Career Advisor, EMEA',
+    location: 'London, UK',
+    region: 'GLOBAL',
+    field: 'career',
+    bio: '런던 시티의 금융·법률 시니어 임원 트랜지션이 전문 영역. 비전통적 커리어 피벗 사례를 200건 이상 자문했다.',
+    credentials: ['前 Heidrick & Struggles 파트너', 'Oxford PPE', 'Chartered FCIPD'],
+  },
+  {
+    id: 'lea-dubois',
+    name: 'Léa Dubois',
+    nameEn: 'Léa Dubois',
+    title: 'Aptitude Advisor, Europe',
+    location: 'Paris, France',
+    region: 'GLOBAL',
+    field: 'aptitude',
+    bio: '럭셔리·크리에이티브 산업의 진로 진단 전문. 예술·디자인 인재의 커리어 장기 설계를 다룬다.',
+    credentials: ['HEC Paris MBA', '전 LVMH Talent Strategy', 'ICF PCC 인증'],
+  },
+  {
+    id: 'daniel-park',
+    name: 'Daniel Park',
+    nameEn: 'Daniel Park',
+    title: 'APAC Entrepreneurship Lead',
+    location: 'Singapore',
+    region: 'GLOBAL',
+    field: 'entrepreneurship',
+    bio: 'APAC 패밀리 비즈니스 승계와 동남아 시장 확장 자문. 싱가포르·자카르타·호치민에 협업 파트너 네트워크를 운영한다.',
+    credentials: ['INSEAD MBA', '前 Temasek Holdings', '한국·싱가포르 이중국적'],
+  },
+];
