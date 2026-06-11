@@ -20,16 +20,33 @@ export default function HomePage() {
 
 function Hero() {
   return (
-    <section className="border-b border-edge bg-paper">
-      <div className="container pt-20 pb-20 md:pt-32 md:pb-28">
+    <section className="relative overflow-hidden border-b border-edge bg-pine-900">
+      {/* Background dashboard image — pushed to the right */}
+      <div
+        aria-hidden
+        className="absolute inset-y-0 right-0 w-full bg-cover bg-right bg-no-repeat md:w-[68%]"
+        style={{ backgroundImage: "url('/brand/hero-tablet.jpg')" }}
+      />
+      {/* Dark overlay for text legibility: strong on the left, fading toward the right.
+          On mobile the image fills the width, so keep the overlay heavier there. */}
+      <div
+        aria-hidden
+        className="absolute inset-0 bg-gradient-to-r from-pine-900 via-pine-900/90 to-pine-900/70 md:to-pine-900/55"
+      />
+      <div
+        aria-hidden
+        className="absolute inset-0 bg-pine-900/45 md:bg-pine-900/35"
+      />
+
+      <div className="container relative pt-20 pb-20 md:pt-32 md:pb-28">
         <div className="max-w-4xl">
-          <Eyebrow>Convergent Consulting</Eyebrow>
-          <h1 className="mt-10 text-[2.4rem] font-bold leading-[1.18] tracking-tightest text-ink md:text-[4rem]">
+          <Eyebrow tone="paper">Convergent Consulting</Eyebrow>
+          <h1 className="mt-10 text-[2.4rem] font-bold leading-[1.18] tracking-tightest text-paper md:text-[4rem]">
             단일 분야의 해답을 넘어,
             <br />
-            <span className="text-pine-700">분야를 아우르는 방향</span>을 제시합니다.
+            <span className="text-pine-300">분야를 아우르는 방향</span>을 제시합니다.
           </h1>
-          <p className="mt-10 max-w-2xl text-base leading-relaxed text-ink-muted md:text-lg">
+          <p className="mt-10 max-w-2xl text-base leading-relaxed text-paper/75 md:text-lg">
             취업, 창업, 진로, 인성
             <br />
             네 분야를 가로지르는 통합적 방향을 함께 설계합니다.
@@ -37,13 +54,13 @@ function Hero() {
           <div className="mt-12 flex flex-wrap items-center gap-3">
             <Link
               href="/contact"
-              className="bg-pine-700 px-7 py-3.5 text-sm font-medium text-paper transition-colors hover:bg-pine-800"
+              className="bg-paper px-7 py-3.5 text-sm font-medium text-pine-900 transition-colors hover:bg-paper/90"
             >
               상담 요청하기
             </Link>
             <Link
               href="/about"
-              className="border border-edge px-7 py-3.5 text-sm font-medium text-ink transition-colors hover:border-pine-700 hover:text-pine-700"
+              className="border border-paper/30 px-7 py-3.5 text-sm font-medium text-paper transition-colors hover:border-paper hover:bg-paper/10"
             >
               컨설팅 방식 알아보기
             </Link>
